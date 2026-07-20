@@ -48,8 +48,7 @@ class TestExecuteEntrypointCheck(test_template.TestPlugin):
                 state=State(State.Label.COMPLETED),
                 events=[
                     Event(
-                        entity_type="binary",
-                        entity_id="fbd635cd48087d967654eb006352c8d2e62d05b0478bd086e75ee2e63ea38afb",
+                        sha256="fbd635cd48087d967654eb006352c8d2e62d05b0478bd086e75ee2e63ea38afb",
                         features={"tag": [FV("Entrypoint points to nonstandard section")]},
                     )
                 ],
@@ -74,8 +73,7 @@ class TestExecuteEntrypointCheck(test_template.TestPlugin):
                 state=State(State.Label.COMPLETED),
                 events=[
                     Event(
-                        entity_type="binary",
-                        entity_id="2c5dd8a64437cb2dd4b6747139c61d2d7f53ab3ddedbf22df3cb01bae170715b",
+                        sha256="2c5dd8a64437cb2dd4b6747139c61d2d7f53ab3ddedbf22df3cb01bae170715b",
                         features={
                             "tag": [FV("Entrypoint is last section"), FV("Entrypoint points to nonstandard section")]
                         },
@@ -102,8 +100,7 @@ class TestExecuteEntrypointCheck(test_template.TestPlugin):
                 state=State(State.Label.COMPLETED),
                 events=[
                     Event(
-                        entity_type="binary",
-                        entity_id="068a94265c45add5ff31a4e52f47d43c8e96480d3b8dcd5d9d2888de6a51c1e1",
+                        sha256="068a94265c45add5ff31a4e52f47d43c8e96480d3b8dcd5d9d2888de6a51c1e1",
                         features={"tag": [FV("Entrypoint outside valid range")]},
                     )
                 ],
@@ -146,8 +143,7 @@ class TestExecuteEntrypointCheck(test_template.TestPlugin):
                 state=State(State.Label.COMPLETED_WITH_ERRORS, message="No sections parsed from PE File"),
                 events=[
                     Event(
-                        entity_type="binary",
-                        entity_id="1aadae3bcf5cc68b86850039f6aeabd51f7dabbb818db68c05a54a8fe9a3fef3",
+                        sha256="1aadae3bcf5cc68b86850039f6aeabd51f7dabbb818db68c05a54a8fe9a3fef3",
                         features={"malformed": [FV("No sections parsed from PE File")]},
                     )
                 ],
