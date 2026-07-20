@@ -75,7 +75,7 @@ class AzulPluginEntryPointCheck(BinaryPlugin):
             if last_physical.PointerToRawData < s.PointerToRawData:
                 last_physical = s
 
-        name = eps.name.strip(b"\x00")
+        name = eps.Name.strip(b"\x00")  # ty: ignore[unresolved-attribute]
         tags = []
         if name not in entry_point_section_names:
             tags.append("Entrypoint points to nonstandard section")
