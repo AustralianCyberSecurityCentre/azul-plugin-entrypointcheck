@@ -5,7 +5,7 @@ Test the entrypointcheck plugin
 
 """
 
-from azul_runner import FV, Event, Filepath, JobResult, State, Uri, test_template
+from azul_runner import FV, Event, JobResult, State, test_template
 
 from azul_plugin_entrypointcheck.main import AzulPluginEntryPointCheck
 
